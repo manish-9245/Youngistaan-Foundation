@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
+    <main class="w-full flex-grow p-6">
+        <h1 class="text-3xl text-black pb-6">Events</h1>
+        <div style="background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer"><button type="button"><a href="eventcalendar.html">Event Calendar</a></button></div>
+        <div class="max-w-md py-4 px-8 bg-white shadow-lg rounded-lg my-20">
+            <div class="flex justify-center md:justify-end -mt-16">
+                <img class="w-20 h-20 object-cover rounded-full border-2 border-indigo-500"
+                    src="https://mir-s3-cdn-cf.behance.net/projects/404/5233f364702685.Y3JvcCwxMjY1LDk5MCw2LDE4.jpg">
+            </div>
+            <div>
+                <h2 class="text-gray-800 text-3xl font-semibold">Event Name</h2>
+                <p class="mt-2 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae dolores
+                    deserunt ea doloremque natus error, rerum quas odio quaerat nam ex commodi hic, suscipit in a
+                    veritatis pariatur minus consequuntur!</p>
+            </div>
+            <div class="flex justify-end mt-4">
+                <a href="#" class="text-xl font-medium text-indigo-500">Enroll</a>
+            </div>
+        </div>
+    </main>
+
+
+</div>
+{% endblock content %}

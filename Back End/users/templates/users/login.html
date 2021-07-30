@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Login Page</title>
+  </head>
+  <body>
+    <form method="POST" action="">
+            {% csrf_token %}
+					
+              <input type="text" name="username" placeholder="Enter Username" class="form-control">
+
+						<!-- <div class="input-group mb-2">
+							<div class="input-group-append">
+								<span class="input-group-text"><i class="fas fa-envelope-square"></i></span>
+							</div>
+							<input type="email" name="email">
+						</div> -->
+
+              <input type="password" name="password" placeholder="Enter Password" class="form-control">
+
+
+				 			<input class="btn btn-outline-success" type="submit" value="Login">
+
+					</form>
+
+  </body>
+</html>

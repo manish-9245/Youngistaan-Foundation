@@ -1,0 +1,27 @@
+{% extends "blog/base.html" %}
+{% block content %}
+
+<div class="w-full h-screen overflow-x-hidden border-t flex flex-col">
+    <main class="w-full flex-grow p-6">
+        <h1 class="text-3xl text-black pb-6">Leaderboard</h1>
+        <table class="rounded-t-lg m-5 w-5/6 mx-auto bg-gray-200 text-gray-800">
+            <tr class="text-left border-b-2 border-gray-300">
+                <th class="px-4 py-3 text-center">USERNAME</th>
+                <th class="px-4 py-3 text-center">RANK</th>
+                <th class="px-4 py-3 text-center">HOURS WORKED</th>
+            </tr>
+
+            <tr class="bg-gray-100 border-b border-gray-200">
+                <td class="px-4 py-3 text-center">USERNAME</td>
+                <td class="px-4 py-3 text-center">1</td>
+                <td class="px-4 py-3 text-center">50</td>
+            </tr>
+        </table>
+    </main>
+
+
+</div>
+
+</div>
+
+{% endblock content %}

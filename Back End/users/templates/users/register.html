@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Register Page</title>
+  </head>
+  <body>
+    <h1>Register Page</h1>
+    <form method="post">
+      {% csrf_token %}
+
+      {{form_2.as_p}}
+      {% for field in form %}
+        {{field.label}}
+        {{field}}
+      {% endfor %}
+
+      <input type="submit" name="" value="Register">
+    </form>
+
+  </body>
+</html>

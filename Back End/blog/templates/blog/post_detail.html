@@ -1,0 +1,60 @@
+
+{% extends "blog/base.html" %}
+{% block content %}
+	
+		
+	<!-- <article class="media content-section">
+		<img class="rounded-circle article-img"
+		src="{{ object.author.profile.image.url }}">
+		<div class="media-body">
+	    	<div class="article-metadata">
+	    		<a class="mr-2" href="{% url 'user-posts' object.author.username %}">{{ object.author }}</a>
+		    	<small class="text-muted">{{ post.date_posted|date:"F d, Y" }}</small>
+			</div>
+	    	<h2 class="article-title">{{ object.title }}</h2>
+	    	<p class="article-content">{{ object.content }}</p>
+			{% if object.author == user %}
+                    <div>
+                        <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'post-update' object.id %}">Update</a>
+                        {% if object.author == admin %}
+							<a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete by Admin</a>
+						{% else %}
+							<a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'post-delete' object.id %}">Delete</a>
+						{% endif %}
+                    </div> 
+            {% endif %}
+	  	</div>
+	</article> -->
+
+	<div class="p-4">
+		<!--Card 1-->
+		<div class=" w-50 lg:max-w-none ml-6 ">
+		  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+			<div class="mb-8">
+			  <div class="text-gray-900 font-bold text-xl mb-2">
+				<p>{{ object.title }}</p></div>
+			  <p class="text-gray-700 text-base">{{ object.content }}</p>
+			</div>
+			<div class="flex items-center">
+				<img class="rounded-circle article-img"
+				src="{{ object.author.profile.image.url }}">
+			  <div class="text-sm">
+				<p class="text-gray-900 leading-none"><a href="#">{{ object.author }}</a></p>
+				<p class="text-gray-600">{{ post.date_posted|date:"F d, Y" }}</p>
+				{% if object.author == user %}
+                    <div>
+                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"> <a  href="{% url 'post-update' object.id %}">Update</a></button>
+                        {% if object.author == admin %}
+							<button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"><a  href="{% url 'post-delete' object.id %}">Delete by Admin</a></button>
+						{% else %}
+							<button class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 border border-blue-700 rounded"><a  href="{% url 'post-delete' object.id %}">Delete</a></button>
+						{% endif %}
+                    </div> 
+            {% endif %}
+			  </div>
+			</div>
+		  </div>
+		</div>
+	</div>
+
+{% endblock content %}
